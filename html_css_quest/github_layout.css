@@ -226,9 +226,7 @@ a{
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
-.row2, .row3, .row4, .row5, .row6, .row7{
-	border-top: none;
-}
+
 
 .row1, .row3, .row6{
 	background-color: whitesmoke;
