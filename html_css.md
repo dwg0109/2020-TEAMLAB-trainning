@@ -1,4 +1,4 @@
-#checklist
+# checklist
 - CSS 퍼블리싱을 할 때, class와 selector들은 어떤 식으로 정리하는 것이 좋을까요?
 
   - selector는 전체 선택자, 타입 선택자, 속성선택자로 구분된다.

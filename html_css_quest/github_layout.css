@@ -92,10 +92,10 @@ a{
 }
 
 
- .main {
-   overflow: hidden;
-	 height: 80%;
- }
+.main {
+	overflow: hidden;
+	height: 80%;
+}
 
 .main-header {
 	border-bottom: 1px solid lightgray;
@@ -113,10 +113,10 @@ a{
 }
 
 .header-button {
-    display:flex;
-    margin-left: 36%;
-		font-size: 15px;
-		font-weight: bold;
+  display:flex;
+  margin-left: 36%;
+	font-size: 15px;
+	font-weight: bold;
 }
 .header-button1, .header-button2, .header-button3{
   border : 1px solid lightgray;
