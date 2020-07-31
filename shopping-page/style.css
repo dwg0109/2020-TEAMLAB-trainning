@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  height: 97vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo{
+  cursor: pointer;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+}
+
+.btn{
+  background-color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.img-btn{
+  width: 65px;
+  height: 65px;
+}
+
+#blue-btn, #yellow-btn, #pink-btn{
+  font-size: 15px;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+#blue-btn{
+  background-color: blue;
+}
+
+#yellow-btn{
+  background-color: yellow;
+}
+
+#pink-btn{
+  background-color: pink;
+}
+
+.items{
+  width: 27.5%;
+  height: 40%;
+  list-style: none;
+  padding-left: 0;
+  overflow-y: scroll;
+}
+
+.item{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+
+.main-img{
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
