@@ -24,11 +24,11 @@ const items = [
 
 function display(items){
   const container = document.querySelector('.items');
-  container.innerHTML = items.map(item => li(item));
-}
-
-function li(item){
-  return `<li class="item"><img src="${item.img}" alt="${item.type}" class="main-img">${item.gender}, ${item.size} </li>`;
+  let result = "";
+  for (let i=0; i<items.length; i++){
+    result += `<li class="item"><img src="${items[i].img}" alt="${items[i].type}" class="main-img">${items[i].gender}, ${items[i].size} </li>`;
+  container.innerHTML = result;
+  }
 }
 
 display(items);
