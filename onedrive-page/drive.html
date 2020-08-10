@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>onedrive</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="drivecss.css">
+    <script src="display.js" defer></script>
+    <style></style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#setting">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <button type="button" class="glyphicon glyphicon-th navbar-brand hidden-xs" id="first-button"></button>
+          <button type="button" class="navbar-brand visible-xs glyphicon glyphicon-menu-hamburger" data-toggle="#side" id="second-button"></button>
+          <a class="navbar-brand" href="#" id="logo">Onedrive</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="setting">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-envelope"></span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-cog"></span></a></li>
+            <li><a href="#">?</a></li>
+            <li><a href="#">Daewoong Kim <span class="glyphicon glyphicon-user"></span></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+    <div class="container-fluid">
+
+      <div class="row" id="side">
+
+        <div class="col-sm-2 hidden-xs sidebar-offcanvas" id="sidebar">
+          <div class="row input-group">
+            <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+            <input type="text" class="form-control" id="search" placeholder="모두 검색">
+          </div>
+          <div class="row list-group">
+            <span class="onedrive">Onedrive</span>
+            <a href="#" class="list-group-item active" id="active">파일</a>
+            <a href="#" class="list-group-item">최근항목</a>
+            <a href="#" class="list-group-item">사진</a>
+            <a href="#" class="list-group-item">공유됨</a>
+            <a href="#" class="list-group-item">휴지통</a>
+            <a href="#" class="list-group-item">PC</a>
+          </div>
+          <div class="row" id="sidebar-footer">
+            <a href="#" class="list-group-item" id="footer1">1.11TB 중 364GB 사용</a>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 37%;">
+                <span class="sr-only">37% Complete</span>
+              </div>
+            </div>
+            <a href="#" class="list-group-item" id="footer2"><span class="glyphicon glyphicon-expand"></span> 프리미엄 onedrive</a>
+            <a href="#" class="list-group-item" id="footer3">onedrive 앱 다운로드</a>
+          </div>
+        </div><!--/.sidebar-offcanvas-->
+
+
+
+        <div class="col-xs-12 col-sm-10" id="main">
+
+          <div class="row hidden-xs" id="row1">
+            <button type="button" class="btn btn-default non-click"><span class="btn-icon glyphicon glyphicon-plus"></span> 새로 만들기</button>
+            <button type="button" class="btn btn-default non-click"><span class="btn-icon glyphicon glyphicon-open"></span> 업로드</button>
+            <button type="button" class="btn btn-default click-button collapse"><span class="btn-icon glyphicon glyphicon-share"></span> 공유</button>
+            <button type="button" class="btn btn-default click-button collapse"><span class="btn-icon glyphicon glyphicon glyphicon-save"></span> 다운로드</button>
+            <button type="button" class="btn btn-default click-button collapse delete"><span class="btn-icon glyphicon glyphicon-trash"></span> 삭제</button>
+            <button type="button" class="btn btn-default click-button collapse"><span class="btn-icon glyphicon glyphicon-transfer"></span> 이동</button>
+            <button type="button" class="btn btn-default click-button collapse"><span class="btn-icon glyphicon glyphicon-duplicate"></span> 복사</button>
+            <button type="button" class="btn btn-default click-button collapse"><span class="btn-icon glyphicon glyphicon-picture"></span> 앨범에 추가</button>
+            <button type="button" class="btn btn-default click-button collapse"><span class="btn-icon glyphicon glyphicon-tags"></span> 태그 편집</button>
+
+            <span class="right-button pull-right">
+              <button type="button" class="btn btn-default click-button collapse count">0 <span class="btn-icon glyphicon glyphicon-remove"></span></button>
+
+              <div class="btn-group btn-group-right" role="group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  정렬
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#" id="name">이름순</a></li>
+                  <li><a href="#" id="size">크기순</a></li>
+                </ul>
+              </div>
+              <button type="button" class="btn btn-default non-click"><span class="btn-icon glyphicon glyphicon-align-left"></span></button>
+              <button type="button" class="btn btn-default"><span class="btn-icon glyphicon glyphicon-info-sign"></span></button>
+            </span>
+
+          </div>
+
+
+
+
+          <div class="row visible-xs" id="row1">
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+            <div class="btn-group btn-group-right" role="group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="btn-icon glyphicon glyphicon-option-horizontal">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li class="non-click"><a href="#"><span class="btn-icon glyphicon glyphicon-plus"></span> 새로 만들기</a></li>
+                <li class="non-click"><a href="#"><span class="btn-icon glyphicon glyphicon-open"></span> 업로드</a></li>
+                <li class="click-button collapse"><a href="#"><span class="btn-icon glyphicon glyphicon-share"></span> 공유</li>
+                <li class="click-button collapse"><a href="#"><span class="btn-icon glyphicon glyphicon glyphicon-save"></span> 다운로드</li>
+                <li class="click-button collapse"><a href="#"><span class="btn-icon glyphicon glyphicon-trash delete"></span> 삭제</li>
+                <li class="click-button collapse"><a href="#"><span class="btn-icon glyphicon glyphicon-transfer"></span> 이동</li>
+                <li class="click-button collapse"><a href="#"><span class="btn-icon glyphicon glyphicon-duplicate"></span> 복사</li>
+                <li class="click-button collapse"><a href="#"><span class="btn-icon glyphicon glyphicon-picture"></span> 앨범에 추가</li>
+                <li class="click-button collapse"><a href="#"><span class="btn-icon glyphicon glyphicon-tags"></span> 태그 편집</li>
+              </ul>
+            </div>
+
+            <span class="right-button pull-right">
+              <button type="button" class="btn btn-default click-button collapse count"> <span class="btn-icon glyphicon glyphicon-remove"></span></button>
+
+              <button type="button" class="btn btn-default non-click"><span class="btn-icon glyphicon glyphicon-align-left"></span></button>
+              <button type="button" class="btn btn-default"><span class="btn-icon glyphicon glyphicon-info-sign"></span></button>
+            </span>
+
+          </div>
+
+
+
+          <ol class="breadcrumb">
+            <li><a href="#">파일</a></li>
+            <li><a href="#">스터디자료</a></li>
+            <li class="active">c231n</li>
+          </ol>
+
+          <table class="table-condensed table-hover borderless input">
+            <!-- js 함수 -->
+          </table>
+        </div><!--/.col-xs-12.col-sm-9-->
+
+      </div><!--/row-->
+    </div>
+
+
+
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
